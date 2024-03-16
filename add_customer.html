@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Customer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="add_customer.js"></script>
+  </head>
+  <body>
+    <h1>Add Customer</h1>
+    <form id="customer-form" action="http://localhost:3000/add-customer">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <br>
+      <label for="carRegistration">Car registration:</label>
+      <input type="text" id="carRegistration" name="carRegistration" required>
+      <br>
+      <label for="carIn">Car in:</label>
+      <input type="date" id="carIn" name="carIn" required>
+      <br>
+      <label for="carOut">Car out:</label>
+      <input type="date" id="carOut" name="carOut" required>
+      <br>
+      <label for="jobDescription">Job description:</label>
+      <input type="text" id="jobDescription" name="jobDescription" required>
+      <br>
+      <label for="lengthOfWork">Length of work:</label>
+      <input type="text" id="lengthOfWork" name="lengthOfWork" required>
+      <br>
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price" required>
+      <br>
+      <label for="guaranteePeriod">Guarantee period:</label>
+      <input type="text" id="guaranteePeriod" name="guaranteePeriod" required>
+      <br>
+      <label for="notes">Notes:</label>
+      <textarea id="notes" name="notes"></textarea>
+      <br>
+      <button type="submit" id="add-customer-button">Add Customer</button>
+    </form>
+    <script>
+      document.getElementById('customer-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        addCustomer();
+      });
+    </script>
+  </body>
+</html>
