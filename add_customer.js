@@ -21,7 +21,7 @@ function addCustomer() {
       notes: notes
     };
   
-    fetch('http://localhost:3000/add-customer', {
+    fetch('http://localhost:8000/add-customer', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
